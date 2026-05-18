@@ -15,6 +15,11 @@ public:
     }
 };
 
-int main() {}
+int main() {
+    AbstraksiKlas ak;
+    ak.setXY("Hello", "World");
+    ak.display();
+    return 0;
+}
 
 
