@@ -55,3 +55,34 @@ public:
         }
     }
 };
+
+int main() {
+
+    RekeningBank *r1 = new RekeningSyariah(5000000);
+    RekeningBank *r2 = new RekeningKonvensional(5000000);
+    RekeningBank *r3 = new RekeningPremium(8000000);
+    RekeningBank *r4 = new RekeningPremium(15000000);
+
+    cout << "\n=== Rekening Syariah ===" << endl;
+    r1->potongAdmin();
+    r1->tampilSaldo();
+
+    cout << "\n=== Rekening Konvensional ===" << endl;
+    r2->potongAdmin();
+    r2->tampilSaldo();
+
+    cout << "\n=== Rekening Premium 1 ===" << endl;
+    r3->potongAdmin();
+    r3->tampilSaldo();
+
+    cout << "\n=== Rekening Premium 2 ===" << endl;
+    r4->potongAdmin();
+    r4->tampilSaldo();
+
+    delete r1;
+    delete r2;
+    delete r3;
+    delete r4;
+
+    return 0;
+}
