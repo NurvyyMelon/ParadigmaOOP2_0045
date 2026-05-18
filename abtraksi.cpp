@@ -13,5 +13,8 @@ public:
         cout << "Nilai x: " << x << endl;
         cout << "Nilai y: " << y << endl;
     }
+};
+
+int main() {}
 
 
