@@ -29,3 +29,29 @@ public:
         cout << "Rekening Syariah bebas biaya admin." << endl;
     }
 };
+
+// Rekening Konvensional
+class RekeningKonvensional : public RekeningBank {
+public:
+    RekeningKonvensional(double s) : RekeningBank(s) {}
+
+    void potongAdmin() override {
+        saldo -= 15000;
+        cout << "Biaya admin Rp 15.000 dipotong." << endl;
+    }
+};
+
+// Rekening Premium
+class RekeningPremium : public RekeningBank {
+public:
+    RekeningPremium(double s) : RekeningBank(s) {}
+
+    void potongAdmin() override {
+        if (saldo > 10000000) {
+            cout << "Saldo di atas Rp 10.000.000, bebas biaya admin." << endl;
+        } else {
+            saldo -= 50000;
+            cout << "Biaya admin Rp 50.000 dipotong." << endl;
+        }
+    }
+};
